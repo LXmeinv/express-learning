@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta id="testViewport" name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=no"/>
+  <title>Title</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/jquery-1.11.1.min.js"></script>
+  <script src="/js/vue-2.3.3.min.js"></script>
+  <script src="/js/component.js"></script>
+
+  <script>
+    var mvp = document.getElementById("testViewport");
+    var pr = document.documentElement.clientWidth/750;
+    mvp.setAttribute('content','width=device-width,maximum-scale=1.0,user-scalable=no,initial-scale='+pr);
+  </script>
+</head>
+<body>
+
+{{{body}}}
+
+
+<!--vue 模板-->
+<script type="text/x-template" id="sub-title">
+  <div class="sub-title-content">
+    <span :class="['sub-title-content-child',item.text==current.text?'current':'']" v-for="item in list" @click="goLink(item)"  style="margin-left:20px">${item.text}</span>
+  </div>
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

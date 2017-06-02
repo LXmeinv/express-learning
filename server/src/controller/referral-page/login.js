@@ -5,7 +5,7 @@ var g = require('../../core/gateway');
 var cf = require('../../core/common-func');
 
 exports.GET = function *(req, body, query){
-  return g.view('login',{},{layout:false});
+  return g.view('login',{},{layout:template.html});
 };
 
 exports.POST = function *(req, body, query){

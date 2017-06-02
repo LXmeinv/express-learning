@@ -63,7 +63,7 @@ exports.postPage1 = function *(req, body, query) {
 };
 
 exports.postPage3=function *(req,body,query){
-
+       return g.view({options})
 }
 
 
